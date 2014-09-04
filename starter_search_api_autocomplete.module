@@ -1,0 +1,17 @@
+<?php
+/**
+ * @file
+ * Code for the Starter: Search API Autocomplete feature.
+ */
+
+include_once 'starter_search_api_autocomplete.features.inc';
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function starter_search_api_autocomplete_form_views_exposed_form_alter(&$form, $form_state) {
+  if ($form['#id'] == 'views-exposed-form-search-api-autocomplete-block') {
+    $form['search']['#attributes']['autocomplete'] = 'off';
+    $form['search']['#attributes']['placeholder'] = t('Search');
+  }
+}

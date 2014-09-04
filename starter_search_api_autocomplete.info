@@ -1,0 +1,16 @@
+name = Starter: Search API Autocomplete
+description = Starter Search API Autocomplete.
+core = 7.x
+package = Starter
+version = 7.x-1.0
+project = starter_search_api_autocomplete
+dependencies[] = context
+dependencies[] = ctools
+dependencies[] = views
+dependencies[] = starter_search_api
+features[context][] = search_api_autocomplete
+features[ctools][] = context:context:3
+features[ctools][] = views:views_default:3.0
+features[features_api][] = api:2
+features[views_view][] = search_api_autocomplete
+project path = sites/all/modules/features
